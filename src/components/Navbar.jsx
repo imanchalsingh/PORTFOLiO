@@ -37,6 +37,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           <a
+            style={{ fontFamily: "Lavishly Yours" }}
             href="#home"
             className="text-2xl font-bold text-indigo-600 dark:text-indigo-400"
           >

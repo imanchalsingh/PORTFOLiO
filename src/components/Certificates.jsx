@@ -23,11 +23,21 @@ import udemyhtmlcssjs from "./certificates/udemyhtmlcssjs.png";
 import udemyhtmlcssjschallenge from "./certificates/udemyhtmlcssjschallenge.jpg";
 import udemyjs20project from "./certificates/udemyjs20project.png";
 import webdev from "./certificates/webdev.jpg";
+import chatgpt from "./certificates/chatgptcc.png";
 
 const Certificates = () => {
   const [viewMode, setViewMode] = useState("horizontal"); // "horizontal" or "grid"
 
   const certificates = [
+    {
+      id: 19,
+      title: "ChatGPT",
+      issuer: "Coding Ninjas",
+      date: "September 2025",
+      credentialLink: "#",
+      skills: ["AI", "Machine Learning", "NLP"],
+      image: chatgpt,
+    },
     {
       id: 1,
       title: "Web Development",

@@ -1,6 +1,6 @@
 // components/Hero.js
 import React from "react";
-import ProfilePic from "./ProfilePic/ProfilePic.png";
+import ProfilePic from "./ProfilePic/ProfilePic.jpg";
 
 const Hero = () => {
   return (
@@ -28,7 +28,7 @@ const Hero = () => {
             <div className="flex flex-wrap gap-4">
               <a
                 href="#projects"
-                className="px-6 py-3 bg-indigo-600 text-white rounded-lg shadow-lg hover:bg-indigo-700 transition-colors duration-300 font-medium"
+                className="px- py-3 bg-indigo-600 text-white rounded-lg shadow-lg hover:bg-indigo-700 transition-colors duration-300 font-medium"
               >
                 View My Work
               </a>

@@ -5,6 +5,15 @@ import { BriefcaseIcon, AcademicCapIcon } from "@heroicons/react/24/outline";
 const Experience = () => {
   const experiences = [
     {
+      id: 3,
+      type: "work",
+      role: "Full-Stack Developer",
+      company: "CodeAlpha",
+      period: "Oct 2025 - Present",
+      description:
+        "Contributing to full-stack projects with MERN stack, focusing on REST APIs, authentication, and scalable web apps.",
+    },
+    {
       id: 1,
       type: "work",
       role: "Web Developer Intern",
