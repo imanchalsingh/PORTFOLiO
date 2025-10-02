@@ -85,14 +85,14 @@ const CodingProfiles = () => {
       name: "Project Euler",
       description: "Mathematical/ computational problems",
       link: "https://projecteuler.net/progress",
-      icon: "https://projecteuler.net/themes/logo_default.png",
+      icon: "https://share.hawken.edu/DigiDIY/mc-web/photos/project_euler.png",
     },
     {
       id: 12,
       name: "W3Schools",
       description: "Web development tutorials and references",
       link: "https://pathfinder.w3schools.com/",
-      icon: "https://upload.wikimedia.org/wikipedia/commons/3/3e/W3Schools_logo.png",
+      icon: "https://logospng.org/download/w3schools/w3schools-2048.png",
     },
     {
       id: 13,
@@ -100,6 +100,13 @@ const CodingProfiles = () => {
       description: "Coding Ninjas learning platform",
       link: "https://www.naukri.com/code360/profile/imanchalsingh",
       icon: "https://files.codingninjas.com/cnlogo-32874.png",
+    },
+    {
+      id: 14,
+      name: "Hackerearth",
+      description: "Coding challenges and hackathons",
+      link: "https://www.hackerearth.com/@imanchalsingh/",
+      icon: "https://utkarshtambe10.github.io/Coding-Profiles/images/hackerearth.png",
     },
   ];
 
@@ -160,7 +167,7 @@ const CodingProfiles = () => {
                   <img
                     src={profile.icon}
                     alt={profile.name}
-                    className="w-8 h-8 object-contain"
+                    className="object-contain bg-gray-100 w-12 h-12 rounded-full"
                   />
                 </div>
                 <div>
