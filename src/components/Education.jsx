@@ -6,57 +6,6 @@ import { AcademicCapIcon } from "@heroicons/react/24/outline";
 const Education = () => {
   const education = [
     {
-      institute: "Self-employed",
-      type: "Freelance",
-      actual_location: "Ayodhya, Uttar Pradesh, India",
-      location: "Remote",
-      roles: [
-        {
-          role: "Full-Stack Developer",
-          period: "May 2025 - Sep 2025 · 5 mos",
-          description:
-            "Worked on DevOps, PostgreSQL, MongoDB, REST APIs, React, Node.js.",
-          skills: [
-            "DevOps",
-            "PostgreSQL",
-            "MongoDB",
-            "REST APIs",
-            "React.js",
-            "Node.js",
-            "Tailwind CSS",
-            "TypeScript",
-          ],
-        },
-        {
-          role: "MERN-Stack Developer",
-          period: "Dec 2024 - Apr 2025 · 5 mos",
-          description: "Built full-stack solutions with MERN stack.",
-          skills: ["React.js", "Node.js", "MongoDB", "Express.js"],
-        },
-        {
-          role: "Web Developer",
-          period: "Jun 2024 - Nov 2024 · 6 mos",
-          description: "Worked on React, Node.js, REST APIs, GitHub.",
-          skills: ["React.js", "Node.js", "REST APIs", "GitHub"],
-        },
-        {
-          role: "Front-End Developer",
-          period: "Mar 2023 - May 2024 · 1 yr 3 mos",
-          description:
-            "Created responsive UIs with React, Redux, TypeScript, and Material-UI.",
-          skills: [
-            "HTML5",
-            "CSS3",
-            "React.js",
-            "Redux.js",
-            "TypeScript",
-            "Material-UI",
-            "Responsive Web Design",
-          ],
-        },
-      ],
-    },
-    {
       institute: "Institute of Engineering and Technology",
       type: "Computer Science Course",
       actual_location: "Ayodhya, Uttar Pradesh, India",
