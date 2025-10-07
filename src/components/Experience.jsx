@@ -46,7 +46,7 @@ const Experience = () => {
       office: "NA",
       location: "Remote",
       description:
-        "Worked on real-world projects, improved UI/UX, explored automation, and strengthened problem-solving skills.",
+        "Worked on real-world projects at a stealth startup (NDA), improved UI/UX with React + Tailwind, explored automation, and strengthened problem-solving skills.",
     },
   ];
 
