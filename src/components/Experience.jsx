@@ -29,7 +29,7 @@ const Experience = () => {
     {
       id: 3,
       type: "Internship",
-      role: "Web Developer",
+      role: "Web Development Intern",
       company: "CodSoft",
       period: "Sep 2025 - Oct 2025",
       office: "Kolkata, West Bengal, India",
@@ -40,10 +40,10 @@ const Experience = () => {
     {
       id: 4,
       type: "Internship",
-      role: "Front-End Engineer",
-      company: "Tech Training Program",
+      role: "Front-End Engineer Intern",
+      company: "Stealth Startup",
       period: "Aug 2025 - Sep 2025",
-      office: "Bengaluru, Karnataka, India",
+      office: "NA",
       location: "Remote",
       description:
         "Worked on real-world projects, improved UI/UX, explored automation, and strengthened problem-solving skills.",
