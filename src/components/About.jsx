@@ -86,11 +86,7 @@ const About = () => {
               Who I Am
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-<<<<<<< HEAD
               I’m a final-year Computer Science (BCA) student. Passionate about web
-=======
-              I’m a final-year Computer Science (BCA) student. Passionate about 
->>>>>>> a368d3e9873423dd5e263bad0232407739b52110
               Development with strong hands-on experience in building
               interactive, responsive, and user-friendly web applications.
               Skilled in React.js, TypeScript, JavaScript, Tailwind CSS,
