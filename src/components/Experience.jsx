@@ -54,10 +54,10 @@ const Experience = () => {
       role: "Front-End Engineer Intern",
       company: "Stealth Startup",
       period: "Aug 2025 - Sep 2025",
-      office: "Bengaluru, Karnataka, India",
+      office: "NA",
       location: "Remote",
       description:
-        "Worked on real-world projects, improved UI/UX, explored automation, and strengthened problem-solving skills.",
+        "Worked on real-world projects at a stealth startup (NDA), improved UI/UX with React + Tailwind, explored automation, and strengthened problem-solving skills.",
     },
   ];
 
