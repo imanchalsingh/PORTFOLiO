@@ -26,6 +26,8 @@ import webdev from "./certificates/webdev.jpg";
 import chatgpt from "./certificates/chatgptcc.png";
 import expressjssl from "./certificates/expressjssl.png";
 import fullstacksl from "./certificates/full-stack-sl.png";
+import ai_assiated from "./certificates/ai-assited.png";
+import cs_fundamentals from "./certificates/cs-fundamentals.png";
 
 const Certificates = () => {
   const [viewMode, setViewMode] = useState("horizontal"); // "horizontal" or "grid"
@@ -33,6 +35,24 @@ const Certificates = () => {
   const certificates = [
     {
       id: 1,
+      title: "Ai Assisted Development",
+      issuer: "Coding Ninjas",
+      date: "October 2025",
+      credentialLink: "#",
+      skills: ["AI", "Machine Learning", "NLP"],
+      image: ai_assiated,
+    },
+    {
+      id: 2,
+      title: "Computer Science Fundamentals",
+      issuer: "Coding Ninjas",
+      date: "October 2025",
+      credentialLink: "#",
+      skills: ["Data Structures", "Algorithms", "Problem Solving"],
+      image: cs_fundamentals,
+    },
+    {
+      id: 3,
       title: "Full Stack Development",
       issuer: "SimpliLearn|Skillup",
       date: "October 2025",
@@ -41,7 +61,7 @@ const Certificates = () => {
       image: fullstacksl,
     },
     {
-      id: 2,
+      id: 4,
       title: "Express.js",
       issuer: "SimpliLearn|Skillup",
       date: "October 2025",
@@ -50,7 +70,7 @@ const Certificates = () => {
       image: expressjssl,
     },
     {
-      id: 3,
+      id: 5,
       title: "ChatGPT",
       issuer: "Coding Ninjas",
       date: "September 2025",
@@ -59,7 +79,7 @@ const Certificates = () => {
       image: chatgpt,
     },
     {
-      id: 4,
+      id: 5,
       title: "Web Development",
       issuer: "SoloLearn",
       date: "August 2024",
@@ -68,7 +88,7 @@ const Certificates = () => {
       image: webdev,
     },
     {
-      id: 5,
+      id: 6,
       title: "Front End Development",
       issuer: "SoloLearn",
       date: "October 2024",
@@ -77,7 +97,7 @@ const Certificates = () => {
       image: FrontendSololearn,
     },
     {
-      id: 6,
+      id: 7,
       title: "Problem Solving",
       issuer: "Hackerrank",
       date: "August 2024",
@@ -86,7 +106,7 @@ const Certificates = () => {
       image: problemsolvinghk,
     },
     {
-      id: 7,
+      id: 8,
       title: "JavaScript Basics",
       issuer: "Hackerrank",
       date: "August 2024",
@@ -95,7 +115,7 @@ const Certificates = () => {
       image: jshk,
     },
     {
-      id: 8,
+      id: 9,
       title: "AngularJS",
       issuer: "SoloLearn | Google",
       date: "August 2024",
@@ -104,7 +124,7 @@ const Certificates = () => {
       image: angular,
     },
     {
-      id: 9,
+      id: 10,
       title: "The Complete JavaScript Course 2024: From Zero to Expert!",
       issuer: "Udemy",
       date: "August 2024",
@@ -113,7 +133,7 @@ const Certificates = () => {
       image: jsudemy,
     },
     {
-      id: 10,
+      id: 11,
       title: "React Basic",
       issuer: "Hackerrank",
       date: "August 2024",
@@ -122,7 +142,7 @@ const Certificates = () => {
       image: Reacthk,
     },
     {
-      id: 11,
+      id: 12,
       title: "Introduction to C++",
       issuer: "SoloLearn",
       date: "June 2025",
@@ -131,7 +151,7 @@ const Certificates = () => {
       image: CppSololearn,
     },
     {
-      id: 12,
+      id: 13,
       title: "JavaScript Web Projects",
       issuer: "Udemy",
       date: "May 2024",
@@ -140,7 +160,7 @@ const Certificates = () => {
       image: udemyjs20project,
     },
     {
-      id: 13,
+      id: 14,
       title: "Introduction to JavaScript",
       issuer: "SoloLearn",
       date: "August 2024",
@@ -149,7 +169,7 @@ const Certificates = () => {
       image: jssololearn,
     },
     {
-      id: 14,
+      id: 15,
       title: "Python Basic",
       issuer: "Hackerrank",
       date: "August 2024",
@@ -158,7 +178,7 @@ const Certificates = () => {
       image: pythonBasichk,
     },
     {
-      id: 15,
+      id: 16,
       title: "Introduction to Python Programming",
       issuer: "SoloLearn",
       date: "September 2024",
@@ -167,7 +187,7 @@ const Certificates = () => {
       image: pythonsololearn,
     },
     {
-      id: 16,
+      id: 17,
       title: "Fundamentals of HTML5",
       issuer: "Coding Ninjas",
       date: "September 2025",
@@ -176,7 +196,7 @@ const Certificates = () => {
       image: FundamentalhtmlCN,
     },
     {
-      id: 17,
+      id: 18,
       title: "Fundamentals of CSS",
       issuer: "Coding Ninjas",
       date: "September 2025",
@@ -185,7 +205,7 @@ const Certificates = () => {
       image: FundamentalCSSCN,
     },
     {
-      id: 18,
+      id: 19,
       title: "CSS Bsics",
       issuer: "Hackerrank",
       date: "August 2024",
@@ -194,7 +214,7 @@ const Certificates = () => {
       image: csshk,
     },
     {
-      id: 19,
+      id: 20,
       title: "Introduction to HTML",
       issuer: "SoloLearn",
       date: "August 2024",
@@ -203,7 +223,7 @@ const Certificates = () => {
       image: html,
     },
     {
-      id: 20,
+      id: 21,
       title: "50 Projects in 50 Days - HTML, CSS & JavaScript",
       issuer: "Udemy",
       date: "May 2024",
@@ -212,7 +232,7 @@ const Certificates = () => {
       image: udemyhtmlcssjschallenge,
     },
     {
-      id: 21,
+      id: 22,
       title: "Build Responsive Real-World Websites with HTML and CSS",
       issuer: "Udemy",
       date: "May 2023",
@@ -277,22 +297,20 @@ const Certificates = () => {
           <div className="mt-6 md:mt-0 flex space-x-2 bg-gray-100 dark:bg-gray-800 rounded-lg p-1">
             <button
               onClick={() => setViewMode("horizontal")}
-              className={`flex items-center px-4 py-2 rounded-md text-sm font-medium ${
-                viewMode === "horizontal"
-                  ? "bg-indigo-600 text-white"
-                  : "text-gray-700 dark:text-gray-300"
-              }`}
+              className={`flex items-center px-4 py-2 rounded-md text-sm font-medium ${viewMode === "horizontal"
+                ? "bg-indigo-600 text-white"
+                : "text-gray-700 dark:text-gray-300"
+                }`}
             >
               <ArrowsRightLeftIcon className="w-4 h-4 mr-2" />
               Horizontal View
             </button>
             <button
               onClick={() => setViewMode("grid")}
-              className={`flex items-center px-4 py-2 rounded-md text-sm font-medium ${
-                viewMode === "grid"
-                  ? "bg-indigo-600 text-white"
-                  : "text-gray-700 dark:text-gray-300"
-              }`}
+              className={`flex items-center px-4 py-2 rounded-md text-sm font-medium ${viewMode === "grid"
+                ? "bg-indigo-600 text-white"
+                : "text-gray-700 dark:text-gray-300"
+                }`}
             >
               <ViewColumnsIcon className="w-4 h-4 mr-2" />
               Grid View
@@ -301,19 +319,17 @@ const Certificates = () => {
         </div>
 
         <div
-          className={`${
-            viewMode === "horizontal"
-              ? "flex overflow-x-auto pb-6 space-x-6 scrollbar-thin scrollbar-thumb-indigo-600 scrollbar-track-gray-100 dark:scrollbar-track-gray-800"
-              : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          }`}
+          className={`${viewMode === "horizontal"
+            ? "flex overflow-x-auto pb-6 space-x-6 scrollbar-thin scrollbar-thumb-indigo-600 scrollbar-track-gray-100 dark:scrollbar-track-gray-800"
+            : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            }`}
           style={viewMode === "horizontal" ? { scrollbarWidth: "thin" } : {}}
         >
           {certificates.map((certificate) => (
             <div
               key={certificate.id}
-              className={`bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 ${
-                viewMode === "horizontal" ? "min-w-[350px]" : ""
-              }`}
+              className={`bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 ${viewMode === "horizontal" ? "min-w-[350px]" : ""
+                }`}
             >
               <div className="flex items-start mb-4">
                 <div className="p-3 bg-indigo-100 dark:bg-indigo-900/30 rounded-lg mr-4">

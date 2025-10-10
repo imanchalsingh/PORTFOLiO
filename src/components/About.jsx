@@ -2,18 +2,31 @@
 import React from "react";
 import {
   CodeBracketIcon,
-  DevicePhoneMobileIcon,
+  GlobeAltIcon,
   PaintBrushIcon,
+  PencilIcon,
 } from "@heroicons/react/24/outline";
+import { LanguageIcon } from "@heroicons/react/16/solid";
 
 const About = () => {
   const skills = [
     { name: "React", level: 90 },
-    { name: "JavaScript", level: 85 },
+    { name: "JavaScript & TypeScript", level: 85 },
     { name: "HTML/CSS", level: 95 },
     { name: "Tailwind CSS", level: 88 },
     { name: "Node.js", level: 75 },
-    { name: "UI/UX Design", level: 80 },
+    { name: "Next.js", level: 70 },
+    { name: "Prisma ORM", level: 85 },
+    { name: "MySQL & PostgreSQL", level: 80 },
+    { name: "MongoDB", level: 70 },
+    { name: "Git and GitHub", level: 90 },
+    { name: "Bootstrap & Mui", level: 75 },
+    { name: "Figma", level: 65 },
+    { name: "C & C++", level: 70 },
+    { name: "Python & Java", level: 20 },
+    { name: "DSA & Problem Solving", level: 60 },
+    { name: "Communication", level: 85 },
+
   ];
 
   const services = [
@@ -21,26 +34,42 @@ const About = () => {
       icon: (
         <CodeBracketIcon className="h-10 w-10 text-indigo-600 dark:text-indigo-400" />
       ),
-      title: "Web Development",
+      title: "Full Stack Development",
       description:
         "Building responsive and modern web applications using the latest technologies.",
     },
     {
       icon: (
-        <DevicePhoneMobileIcon className="h-10 w-10 text-indigo-600 dark:text-indigo-400" />
-      ),
-      title: "Mobile Responsive",
-      description:
-        "Creating websites that work perfectly on all devices and screen sizes.",
-    },
-    {
-      icon: (
         <PaintBrushIcon className="h-10 w-10 text-indigo-600 dark:text-indigo-400" />
       ),
-      title: "UI/UX Design",
+      title: "UI/UX Design and Responsive Design",
       description:
         "Designing intuitive and beautiful user interfaces that enhance user experience.",
     },
+    {
+      icon: (
+        <GlobeAltIcon className="h-10 w-10 text-indigo-600 dark:text-indigo-400" />
+      ),
+      title: "Contributions to Open Source",
+      description:
+        "Actively contributing to open source projects to give back to the developer community.",
+    },
+    {
+      icon: (
+        <PencilIcon className="h-10 w-10 text-indigo-600 dark:text-indigo-400" />
+      ),
+      title: "Problem Solving",
+      description:
+        "Applying analytical skills to solve complex coding challenges efficiently.",
+    },
+    {
+      icon: (
+        <LanguageIcon className="h-10 w-10 text-indigo-600 dark:text-indigo-400" />
+      ),
+      title: "Learning & Experimenting",
+      description:
+        "Constantly learning new technologies and experimenting with innovative solutions.",
+    }
   ];
 
   return (
@@ -57,11 +86,13 @@ const About = () => {
               Who I Am
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
-              I’m a final-year Computer Science (BCA) student. Passionate
+              I’m a final-year Computer Science (BCA) student. Passionate about web
               Development with strong hands-on experience in building
               interactive, responsive, and user-friendly web applications.
               Skilled in React.js, TypeScript, JavaScript, Tailwind CSS,
               Node.js, and Bootstrap, with an eye for detail in UI/UX design.
+              Currently exploring Next.js, Prisma ORM, and PostgreSQL to enhance my
+              full-stack development skills.
             </p>
             <p className="text-gray-600 dark:text-gray-400 mb-6">
               When I'm not coding, you can find me exploring new technologies,
