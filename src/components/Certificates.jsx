@@ -28,11 +28,21 @@ import expressjssl from "./certificates/expressjssl.png";
 import fullstacksl from "./certificates/full-stack-sl.png";
 import ai_assiated from "./certificates/ai-assited.png";
 import cs_fundamentals from "./certificates/cs-fundamentals.png";
+import bootstrapccis from "./certificates/bootstrapccis.png";
 
 const Certificates = () => {
   const [viewMode, setViewMode] = useState("horizontal"); // "horizontal" or "grid"
 
   const certificates = [
+    {
+      id: 0,
+      title: "Bootstrap4 Framework",
+      issuer: "Infosys | Springboard",
+      date: "October 2025",
+      credentialLink: "#",
+      skills: ["Bootstrap", "CSS", "Responsive Design"],
+      image: bootstrapccis,
+    },
     {
       id: 1,
       title: "Ai Assisted Development",
