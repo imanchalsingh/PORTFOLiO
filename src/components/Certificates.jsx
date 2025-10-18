@@ -29,13 +29,23 @@ import fullstacksl from "./certificates/full-stack-sl.png";
 import ai_assiated from "./certificates/ai-assited.png";
 import cs_fundamentals from "./certificates/cs-fundamentals.png";
 import bootstrapccis from "./certificates/bootstrapccis.png";
+import postgresql from "./certificates/postgresql.png";
 
 const Certificates = () => {
   const [viewMode, setViewMode] = useState("horizontal"); // "horizontal" or "grid"
 
   const certificates = [
+     {
+      id: 1,
+      title: "PostgreSQL Developer",
+      issuer: "Infosys | Springboard",
+      date: "October 2025",
+      credentialLink: "#",
+      skills: ["PostgreSQL", "Database Management", "SQL"],
+      image: postgresql,
+    },
     {
-      id: 0,
+      id: 2,
       title: "Bootstrap4 Framework",
       issuer: "Infosys | Springboard",
       date: "October 2025",
@@ -44,7 +54,7 @@ const Certificates = () => {
       image: bootstrapccis,
     },
     {
-      id: 1,
+      id: 3,
       title: "Ai Assisted Development",
       issuer: "Coding Ninjas",
       date: "October 2025",
@@ -53,7 +63,7 @@ const Certificates = () => {
       image: ai_assiated,
     },
     {
-      id: 2,
+      id: 4,
       title: "Computer Science Fundamentals",
       issuer: "Coding Ninjas",
       date: "October 2025",
@@ -62,7 +72,7 @@ const Certificates = () => {
       image: cs_fundamentals,
     },
     {
-      id: 3,
+      id: 5,
       title: "Full Stack Development",
       issuer: "SimpliLearn|Skillup",
       date: "October 2025",
@@ -71,7 +81,7 @@ const Certificates = () => {
       image: fullstacksl,
     },
     {
-      id: 4,
+      id: 6,
       title: "Express.js",
       issuer: "SimpliLearn|Skillup",
       date: "October 2025",
@@ -80,7 +90,7 @@ const Certificates = () => {
       image: expressjssl,
     },
     {
-      id: 5,
+      id: 7,
       title: "ChatGPT",
       issuer: "Coding Ninjas",
       date: "September 2025",
@@ -89,7 +99,7 @@ const Certificates = () => {
       image: chatgpt,
     },
     {
-      id: 5,
+      id: 8,
       title: "Web Development",
       issuer: "SoloLearn",
       date: "August 2024",
@@ -98,7 +108,7 @@ const Certificates = () => {
       image: webdev,
     },
     {
-      id: 6,
+      id: 9,
       title: "Front End Development",
       issuer: "SoloLearn",
       date: "October 2024",
@@ -107,7 +117,7 @@ const Certificates = () => {
       image: FrontendSololearn,
     },
     {
-      id: 7,
+      id: 10,
       title: "Problem Solving",
       issuer: "Hackerrank",
       date: "August 2024",
@@ -116,7 +126,7 @@ const Certificates = () => {
       image: problemsolvinghk,
     },
     {
-      id: 8,
+      id: 11,
       title: "JavaScript Basics",
       issuer: "Hackerrank",
       date: "August 2024",
@@ -125,7 +135,7 @@ const Certificates = () => {
       image: jshk,
     },
     {
-      id: 9,
+      id: 12,
       title: "AngularJS",
       issuer: "SoloLearn | Google",
       date: "August 2024",
@@ -134,7 +144,7 @@ const Certificates = () => {
       image: angular,
     },
     {
-      id: 10,
+      id: 13,
       title: "The Complete JavaScript Course 2024: From Zero to Expert!",
       issuer: "Udemy",
       date: "August 2024",
@@ -143,7 +153,7 @@ const Certificates = () => {
       image: jsudemy,
     },
     {
-      id: 11,
+      id: 14,
       title: "React Basic",
       issuer: "Hackerrank",
       date: "August 2024",
@@ -152,7 +162,7 @@ const Certificates = () => {
       image: Reacthk,
     },
     {
-      id: 12,
+      id: 15,
       title: "Introduction to C++",
       issuer: "SoloLearn",
       date: "June 2025",
@@ -161,7 +171,7 @@ const Certificates = () => {
       image: CppSololearn,
     },
     {
-      id: 13,
+      id: 16,
       title: "JavaScript Web Projects",
       issuer: "Udemy",
       date: "May 2024",
@@ -170,7 +180,7 @@ const Certificates = () => {
       image: udemyjs20project,
     },
     {
-      id: 14,
+      id: 17,
       title: "Introduction to JavaScript",
       issuer: "SoloLearn",
       date: "August 2024",
@@ -179,7 +189,7 @@ const Certificates = () => {
       image: jssololearn,
     },
     {
-      id: 15,
+      id: 18,
       title: "Python Basic",
       issuer: "Hackerrank",
       date: "August 2024",
@@ -188,7 +198,7 @@ const Certificates = () => {
       image: pythonBasichk,
     },
     {
-      id: 16,
+      id: 19,
       title: "Introduction to Python Programming",
       issuer: "SoloLearn",
       date: "September 2024",
@@ -197,7 +207,7 @@ const Certificates = () => {
       image: pythonsololearn,
     },
     {
-      id: 17,
+      id: 20,
       title: "Fundamentals of HTML5",
       issuer: "Coding Ninjas",
       date: "September 2025",
@@ -206,7 +216,7 @@ const Certificates = () => {
       image: FundamentalhtmlCN,
     },
     {
-      id: 18,
+      id: 21,
       title: "Fundamentals of CSS",
       issuer: "Coding Ninjas",
       date: "September 2025",
@@ -215,7 +225,7 @@ const Certificates = () => {
       image: FundamentalCSSCN,
     },
     {
-      id: 19,
+      id: 22,
       title: "CSS Bsics",
       issuer: "Hackerrank",
       date: "August 2024",
@@ -224,7 +234,7 @@ const Certificates = () => {
       image: csshk,
     },
     {
-      id: 20,
+      id: 23,
       title: "Introduction to HTML",
       issuer: "SoloLearn",
       date: "August 2024",
@@ -233,7 +243,7 @@ const Certificates = () => {
       image: html,
     },
     {
-      id: 21,
+      id: 24,
       title: "50 Projects in 50 Days - HTML, CSS & JavaScript",
       issuer: "Udemy",
       date: "May 2024",
@@ -242,7 +252,7 @@ const Certificates = () => {
       image: udemyhtmlcssjschallenge,
     },
     {
-      id: 22,
+      id: 25,
       title: "Build Responsive Real-World Websites with HTML and CSS",
       issuer: "Udemy",
       date: "May 2023",
