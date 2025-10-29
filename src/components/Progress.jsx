@@ -119,7 +119,7 @@ const CodingProfiles = () => {
       id: 13,
       name: "W3Schools",
       description: "Web development tutorials and references",
-      link: "https://pathfinder.w3schools.com/",
+      link: "https://www.w3profile.com/imanchalsingh/",
       icon: "https://logospng.org/download/w3schools/w3schools-2048.png",
       status: "Currently Learning",
       type: "learning-platform",
