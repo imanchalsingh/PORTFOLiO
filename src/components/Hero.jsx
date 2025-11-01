@@ -38,12 +38,7 @@ const Hero = () => {
               >
                 Contact Me
               </a>
-              <a
-                href="https://mylearninghub.vercel.app/"
-                className="px-5 py-3 bg-indigo-600 text-white rounded-lg shadow-lg hover:bg-indigo-700 transition-colors duration-300 font-medium"
-              >
-                Learning hub
-              </a>
+
             </div>
           </div>
           <div className="md:w-2/5 flex justify-center">

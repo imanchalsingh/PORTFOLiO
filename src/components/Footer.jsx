@@ -15,6 +15,9 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
           <p>© {new Date().getFullYear()} Anchal Singh. All rights reserved.</p>
         </div>
+        <div className="text-center text-gray-400 mt-4">
+          <a href="https://mylearninghub.vercel.app/">Visit My Learning hub</a>
+        </div>
       </div>
     </footer>
   );
