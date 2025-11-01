@@ -198,6 +198,46 @@ const CodingProfiles = () => {
       link: "https://devdocs.io/",
       icon: "https://devdocs.io/images/icon-320.png",
       type: "Learning-Platform",
+    },
+    {
+      id: 25,
+      name: "UiVerse",
+      description: "UI/UX design and front-end development",
+      link: "https://uiverse.io/elements",
+      icon: "https://uiverse.io/favicon-32x32.png",
+      type: "Learning-Platform",
+    },
+    {
+      id: 26,
+      name: "TutorialsPoint",
+      description: "Programming tutorials and courses",
+      link: "https://www.tutorialspoint.com/practice/dashboard.php",
+      icon: "https://www.tutorialspoint.com/images/tp-logo-desk.png",
+      type: "Learning-Platform",
+    },
+    {
+      id: 27,
+      name: "GUVI",
+      description: "Coding and tech learning platform",
+      link: "https://www.guvi.in/singhanchal15935796622",
+      icon: "https://www.guvi.in/assets/images/guvi-logo.png",
+      type: "Learning-Platform",
+    },
+    {
+      id: 28,
+      name: "Frontend Practice",
+      description: "Frontend coding challenges and projects",
+      link: "https://www.frontendpractice.com/retired/grasshopper",
+      icon: "https://frontendpractice.com/favicon.ico",
+      type: "Problem-Solving",
+    },
+    {
+      id: 29,
+      name: "Design Systems Repo",
+      description: "Collection of design systems and resources",
+      link: "https://designsystemsrepo.com/",
+      icon: "https://designsystemsrepo.com/assets/images/logo.png",
+      type: "Learning-Platform",
     }
   ];
   // Get unique types for the dropdown filter
