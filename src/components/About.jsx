@@ -16,41 +16,50 @@ const About = () => {
   const fieldSpecializations = [
     { name: "Frontend Development", level: 85, icon: <PaintBrushIcon className="h-5 w-5" />, color: "#bd2323" },
     { name: "Backend Development", level: 75, icon: <ServerIcon className="h-5 w-5" />, color: "#0a295e" },
-    { name: "MERN Stack", level: 70, icon: <CpuChipIcon className="h-5 w-5" />, color: "#e6c235" },
-    { name: "MEAN Stack", level: 45, icon: <CpuChipIcon className="h-5 w-5" />, color: "#ffffff" },
+    { name: "MERN & MEAN Stack", level: 70, icon: <CpuChipIcon className="h-5 w-5" />, color: "#e6c235" },
     { name: "Full Stack Development", level: 80, icon: <CommandLineIcon className="h-5 w-5" />, color: "#bd2323" },
-    { name: "Data Analysis", level: 65, icon: <ChartBarIcon className="h-5 w-5" />, color: "#0a295e" },
-    { name: "Data Science", level: 50, icon: <SparklesIcon className="h-5 w-5" />, color: "#e6c235" },
+    { name: "Data Analysis & Data Science", level: 65, icon: <ChartBarIcon className="h-5 w-5" />, color: "#0a295e" },
     { name: "Cloud Computing", level: 60, icon: <CloudIcon className="h-5 w-5" />, color: "#ffffff" },
   ];
 
   // Tech Stack Data
   const techStack = [
-    { name: "React", icon: "⚛️", category: "Frontend", proficiency: "Expert" },
-    { name: "TypeScript", icon: "📘", category: "Language", proficiency: "Advanced" },
-    { name: "JavaScript", icon: "🟨", category: "Language", proficiency: "Expert" },
-    { name: "HTML5", icon: "📄", category: "Frontend", proficiency: "Expert" },
-    { name: "Tailwind CSS", icon: "🎨", category: "Styling", proficiency: "Expert" },
-    { name: "Node.js", icon: "🟢", category: "Backend", proficiency: "Advanced" },
-    { name: "Express.js", icon: "🚂", category: "Backend", proficiency: "Advanced" },
-    { name: "MongoDB", icon: "🍃", category: "Database", proficiency: "Intermediate" },
-    { name: "PostgreSQL", icon: "🐘", category: "Database", proficiency: "Intermediate" },
-    { name: "Git", icon: "📊", category: "Tools", proficiency: "Expert" },
-    { name: "GitHub", icon: "🐙", category: "Tools", proficiency: "Expert" },
-    { name: "Figma", icon: "🎯", category: "Design", proficiency: "Intermediate" },
-    { name: "Next.js", icon: "⚡", category: "Framework", proficiency: "Intermediate" },
-    { name: "REST API", icon: "🔗", category: "Backend", proficiency: "Advanced" },
-    { name: "C/C++", icon: "⚙️", category: "Language", proficiency: "Intermediate" },
-    { name: "Python", icon: "🐍", category: "Language", proficiency: "Beginner" },
+    { name: "React" },
+    { name: "TypeScript" },
+    { name: "JavaScript" },
+    { name: "HTML5" },
+    { name: "Tailwind CSS", },
+    { name: "Node.js" },
+    { name: "Express.js" },
+    { name: "MongoDB" },
+    { name: "PostgreSQL" },
+    { name: "Angular" },
+    { name: "Prisma" },
+    { name: "Git" },
+    { name: "GitHub" },
+    { name: "Figma" },
+    { name: "Next.js" },
+    { name: "REST API" },
+    { name: "C/C++" },
+    { name: "Python" },
+    { name: "Docker" },
+    { name: "AWS" },
+    { name: "Jest" },
+    { name: "GraphQL" },
+    { name: "MySQL" },
+    { name: "NumPy" },
+    { name: "Pandas" },
+    { name: "Matplotlib" },
+    { name: "Redux" },
+    { name: "Sass" },
+    { name: "Webpack" },
+    { name: "HTML5" },
+    { name: "CSS3" },
+    { name: "Bootstrap" },
+    { name: "D3.js" },
+    { name: "TensorFlow" },
   ];
 
-  // Proficiency colors
-  const proficiencyColors = {
-    Expert: "#e6c235",
-    Advanced: "#bd2323",
-    Intermediate: "#0a295e",
-    Beginner: "#666666"
-  };
 
   return (
     <section id="about" className="py-24 bg-black relative overflow-hidden">
@@ -150,8 +159,6 @@ const About = () => {
                 {/* Experience Stats */}
                 <div className="grid grid-cols-2 gap-4 mb-8">
                   {[
-                    { value: "3+", label: "Years Coding", color: "#bd2323" },
-                    { value: "50+", label: "Projects", color: "#0a295e" },
                     { value: "100%", label: "Dedication", color: "#e6c235" },
                     { value: "∞", label: "Passion", color: "#ffffff" }
                   ].map((stat, index) => (
@@ -165,19 +172,6 @@ const About = () => {
                       <div className="text-sm text-gray-400 uppercase tracking-wider">{stat.label}</div>
                     </div>
                   ))}
-                </div>
-
-                {/* Quote */}
-                <div className="pt-6 border-t border-gray-800">
-                  <div className="flex items-start gap-3">
-                    <div className="text-4xl text-[#bd2323] leading-none">"</div>
-                    <div>
-                      <p className="text-lg italic text-gray-300">
-                        Code is like humor. When you have to explain it, it's bad.
-                      </p>
-                      <p className="text-sm text-[#e6c235] mt-2">- Cory House</p>
-                    </div>
-                  </div>
                 </div>
               </div>
             </div>
@@ -239,93 +233,27 @@ const About = () => {
               </div>
             </div>
 
-            {/* Learning Status */}
-            <div className="mt-8 p-6 bg-gradient-to-r from-[#0a295e]/20 to-[#bd2323]/20 backdrop-blur-sm rounded-2xl border border-gray-800">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-[#e6c235] to-[#bd2323] rounded-lg flex items-center justify-center">
-                  <SparklesIcon className="h-6 w-6 text-black" />
-                </div>
-                <div>
-                  <h4 className="text-xl font-bold text-white">Currently Learning</h4>
-                  <p className="text-sm text-gray-400">Advanced Backend & AI Integration</p>
-                </div>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 text-sm bg-black/50 text-[#e6c235] rounded-full">AWS</span>
-                <span className="px-3 py-1 text-sm bg-black/50 text-[#e6c235] rounded-full">Docker</span>
-                <span className="px-3 py-1 text-sm bg-black/50 text-[#e6c235] rounded-full">Machine Learning</span>
-                <span className="px-3 py-1 text-sm bg-black/50 text-[#e6c235] rounded-full">GraphQL</span>
-              </div>
-            </div>
           </div>
         </div>
 
         {/* Tech Stack Section */}
         <div>
           <div className="flex items-center justify-between mb-8">
-            <h3 className="text-2xl md:text-3xl font-bold text-white">TECH STACK</h3>
             <span className="text-xs px-3 py-1 bg-[#bd2323]/30 text-white rounded-full border border-[#bd2323]">
-              TOOLS & TECHNOLOGIES
+              TECH STACKS
             </span>
           </div>
 
           <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-gray-800">
             <div className="flex flex-wrap gap-3 mb-6">
-              {["Frontend", "Backend", "Database", "Tools", "Language", "Design"].map((category) => (
+              {techStack.map((item) => (
                 <span
-                  key={category}
+                  key={item}
                   className="px-3 py-1 text-xs font-medium rounded-full bg-gray-900/50 text-gray-400"
                 >
-                  {category}
+                  {item.name}
                 </span>
               ))}
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {techStack.map((tech, index) => (
-                <div
-                  key={index}
-                  className="group relative bg-black/30 backdrop-blur-sm rounded-xl p-4 border border-gray-800 hover:border-gray-700 transition-all duration-300"
-                >
-                  <div className="flex items-center gap-3 mb-2">
-                    <span className="text-2xl">{tech.icon}</span>
-                    <div>
-                      <div className="font-medium text-white">{tech.name}</div>
-                      <div className="text-xs text-gray-500">{tech.category}</div>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span
-                      className="text-xs font-bold px-2 py-1 rounded"
-                      style={{
-                        backgroundColor: `${proficiencyColors[tech.proficiency]}20`,
-                        color: proficiencyColors[tech.proficiency]
-                      }}
-                    >
-                      {tech.proficiency}
-                    </span>
-                    <div
-                      className="w-2 h-2 rounded-full animate-pulse"
-                      style={{ backgroundColor: proficiencyColors[tech.proficiency] }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Legend */}
-            <div className="mt-8 pt-6 border-t border-gray-800">
-              <div className="flex flex-wrap gap-4 justify-center">
-                {Object.entries(proficiencyColors).map(([level, color]) => (
-                  <div key={level} className="flex items-center gap-2">
-                    <div
-                      className="w-3 h-3 rounded-full"
-                      style={{ backgroundColor: color }}
-                    ></div>
-                    <span className="text-xs text-gray-400">{level}</span>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>
