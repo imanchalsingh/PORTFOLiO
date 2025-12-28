@@ -26,7 +26,7 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-20">
+      <div className="container mx-auto px-4 md:px-6 relative z-20 mt-15">
         <div className="flex flex-col items-center justify-center text-center max-w-6xl mx-auto">
           {/* Hero Badge */}
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#bd2323]/20 to-[#0a295e]/20 backdrop-blur-sm border border-[#bd2323]/30 mb-8 animate-pulse">
