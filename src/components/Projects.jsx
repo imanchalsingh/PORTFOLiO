@@ -36,7 +36,7 @@ const Projects = () => {
         "A dynamic portfolio website showcasing projects, skills, and experiences with a modern design and smooth animations.",
       image: PortFolio,
       tags: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
-      liveUrl: "https://portfolio-imanchalsingh.vercel.app/",
+      liveUrl: "https://my-portfolio-imanchalsingh.vercel.app/",
       codeUrl: "https://github.com/imanchalsingh/PORTFOLiO",
       featured: true,
       accentColor: "#bd2323"
