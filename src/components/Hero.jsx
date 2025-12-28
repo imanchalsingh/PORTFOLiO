@@ -8,25 +8,8 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center pt-16 pb-12 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden"
+      className="min-h-screen flex items-center pt-16 pb-12 bg-gradient-to-br from-black to-black relative overflow-hidden"
     >
-      {/* Geometric Background Patterns */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-        {/* Grid pattern */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `linear-gradient(to right, #bd2323 1px, transparent 1px),
-                             linear-gradient(to bottom, #bd2323 1px, transparent 1px)`,
-            backgroundSize: '50px 50px'
-          }}></div>
-        </div>
-
-        {/* Color accents */}
-        <div className="absolute -top-60 -right-60 w-[600px] h-[600px] bg-[#bd2323]/10 rounded-full blur-3xl"></div>
-        <div className="absolute -bottom-60 -left-60 w-[600px] h-[600px] bg-[#0a295e]/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-[#e6c235]/5 rounded-full blur-3xl"></div>
-      </div>
-
       {/* Floating particles */}
       <div className="absolute inset-0 -z-10">
         {[...Array(20)].map((_, i) => (
@@ -55,7 +38,6 @@ const Hero = () => {
 
           {/* Main Hero Text */}
           <div className="mb-8 relative">
-            <div className="absolute -inset-4 bg-gradient-to-r from-[#bd2323]/10 to-[#0a295e]/10 blur-xl rounded-3xl -z-10"></div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl xl:text-9xl font-black tracking-tighter mb-4">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-[#e6c235]">
                 ANCHAL
@@ -68,10 +50,10 @@ const Hero = () => {
           </div>
 
           {/* Subtitle */}
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6 max-w-3xl">
-            Crafting Digital Excellence with{" "}
-            <span className="text-[#e6c235]">Code</span> &{" "}
-            <span className="text-[#bd2323]">Creativity</span>
+          <h2 className="text-2xl md:text-2xl lg:text-3xl font-bold text-white mb-6 max-w-3xl">
+            TECH ENTHUSIAST - Turning{" "}
+            <span className="text-[#e6c235]">Ideas</span> into{" "}
+            <span className="text-[#bd2323]">Code.</span>
           </h2>
 
           {/* Description */}
