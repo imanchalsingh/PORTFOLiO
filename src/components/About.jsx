@@ -2,151 +2,377 @@
 import React from "react";
 import {
   CodeBracketIcon,
-  GlobeAltIcon,
   PaintBrushIcon,
-  PencilIcon,
+  ServerIcon,
+  CpuChipIcon,
+  SparklesIcon,
+  ChartBarIcon,
+  CloudIcon,
+  CommandLineIcon
 } from "@heroicons/react/24/outline";
-import { LanguageIcon } from "@heroicons/react/16/solid";
 
 const About = () => {
-  const skills = [
-    { name: "React", level: 90 },
-    { name: "JavaScript & TypeScript", level: 85 },
-    { name: "HTML/CSS", level: 95 },
-    { name: "Tailwind CSS", level: 88 },
-    { name: "Node.js", level: 75 },
-    { name: "Next.js", level: 70 },
-    { name: "Prisma ORM", level: 85 },
-    { name: "MySQL & PostgreSQL", level: 80 },
-    { name: "MongoDB", level: 70 },
-    { name: "Git and GitHub", level: 90 },
-    { name: "Bootstrap & Mui", level: 75 },
-    { name: "Figma", level: 65 },
-    { name: "C & C++", level: 70 },
-    { name: "Python & Java", level: 20 },
-    { name: "DSA & Problem Solving", level: 60 },
-    { name: "Communication", level: 85 },
-
+  // Field Specialization Data
+  const fieldSpecializations = [
+    { name: "Frontend Development", level: 85, icon: <PaintBrushIcon className="h-5 w-5" />, color: "#bd2323" },
+    { name: "Backend Development", level: 75, icon: <ServerIcon className="h-5 w-5" />, color: "#0a295e" },
+    { name: "MERN Stack", level: 70, icon: <CpuChipIcon className="h-5 w-5" />, color: "#e6c235" },
+    { name: "MEAN Stack", level: 45, icon: <CpuChipIcon className="h-5 w-5" />, color: "#ffffff" },
+    { name: "Full Stack Development", level: 80, icon: <CommandLineIcon className="h-5 w-5" />, color: "#bd2323" },
+    { name: "Data Analysis", level: 65, icon: <ChartBarIcon className="h-5 w-5" />, color: "#0a295e" },
+    { name: "Data Science", level: 50, icon: <SparklesIcon className="h-5 w-5" />, color: "#e6c235" },
+    { name: "Cloud Computing", level: 60, icon: <CloudIcon className="h-5 w-5" />, color: "#ffffff" },
   ];
 
-  const services = [
-    {
-      icon: (
-        <CodeBracketIcon className="h-10 w-10 text-indigo-600 dark:text-indigo-400" />
-      ),
-      title: "Full Stack Development",
-      description:
-        "Building responsive and modern web applications using the latest technologies.",
-    },
-    {
-      icon: (
-        <PaintBrushIcon className="h-10 w-10 text-indigo-600 dark:text-indigo-400" />
-      ),
-      title: "UI/UX Design and Responsive Design",
-      description:
-        "Designing intuitive and beautiful user interfaces that enhance user experience.",
-    },
-    {
-      icon: (
-        <GlobeAltIcon className="h-10 w-10 text-indigo-600 dark:text-indigo-400" />
-      ),
-      title: "Contributions to Open Source",
-      description:
-        "Actively contributing to open source projects to give back to the developer community.",
-    },
-    {
-      icon: (
-        <PencilIcon className="h-10 w-10 text-indigo-600 dark:text-indigo-400" />
-      ),
-      title: "Problem Solving",
-      description:
-        "Applying analytical skills to solve complex coding challenges efficiently.",
-    },
-    {
-      icon: (
-        <LanguageIcon className="h-10 w-10 text-indigo-600 dark:text-indigo-400" />
-      ),
-      title: "Learning & Experimenting",
-      description:
-        "Constantly learning new technologies and experimenting with innovative solutions.",
-    }
+  // Tech Stack Data
+  const techStack = [
+    { name: "React", icon: "⚛️", category: "Frontend", proficiency: "Expert" },
+    { name: "TypeScript", icon: "📘", category: "Language", proficiency: "Advanced" },
+    { name: "JavaScript", icon: "🟨", category: "Language", proficiency: "Expert" },
+    { name: "HTML5", icon: "📄", category: "Frontend", proficiency: "Expert" },
+    { name: "Tailwind CSS", icon: "🎨", category: "Styling", proficiency: "Expert" },
+    { name: "Node.js", icon: "🟢", category: "Backend", proficiency: "Advanced" },
+    { name: "Express.js", icon: "🚂", category: "Backend", proficiency: "Advanced" },
+    { name: "MongoDB", icon: "🍃", category: "Database", proficiency: "Intermediate" },
+    { name: "PostgreSQL", icon: "🐘", category: "Database", proficiency: "Intermediate" },
+    { name: "Git", icon: "📊", category: "Tools", proficiency: "Expert" },
+    { name: "GitHub", icon: "🐙", category: "Tools", proficiency: "Expert" },
+    { name: "Figma", icon: "🎯", category: "Design", proficiency: "Intermediate" },
+    { name: "Next.js", icon: "⚡", category: "Framework", proficiency: "Intermediate" },
+    { name: "REST API", icon: "🔗", category: "Backend", proficiency: "Advanced" },
+    { name: "C/C++", icon: "⚙️", category: "Language", proficiency: "Intermediate" },
+    { name: "Python", icon: "🐍", category: "Language", proficiency: "Beginner" },
   ];
+
+  // Proficiency colors
+  const proficiencyColors = {
+    Expert: "#e6c235",
+    Advanced: "#bd2323",
+    Intermediate: "#0a295e",
+    Beginner: "#666666"
+  };
 
   return (
-    <section id="about" className="py-20 bg-white dark:bg-gray-900">
-      <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-4">
-          About Me
-        </h2>
-        <div className="w-20 h-1 bg-indigo-600 mx-auto mb-12"></div>
+    <section id="about" className="py-24 bg-black relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 -z-10">
+        {/* Diagonal Grid Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `linear-gradient(45deg, #0a295e 1px, transparent 1px)`,
+            backgroundSize: '80px 80px'
+          }}></div>
+        </div>
 
-        <div className="flex flex-col md:flex-row gap-12">
-          <div className="md:w-1/2">
-            <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
-              Who I Am
-            </h3>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
-              I’m a final-year Computer Science (BCA) student. Passionate about web
-              Development with strong hands-on experience in building
-              interactive, responsive, and user-friendly web applications.
-              Skilled in React.js, TypeScript, JavaScript, Tailwind CSS,
-              Node.js, and Bootstrap, with an eye for detail in UI/UX design.
-              Currently exploring Next.js, Prisma ORM, and PostgreSQL to enhance my
-              full-stack development skills.
-            </p>
-            <p className="text-gray-600 dark:text-gray-400 mb-6">
-              When I'm not coding, you can find me exploring new technologies,
-              contributing to open source projects, or hiking in the mountains
-              to clear my mind and find inspiration.
-            </p>
+        {/* Gradient Orbs */}
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-[#bd2323]/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-[#0a295e]/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-br from-[#e6c235]/5 to-transparent rounded-full blur-3xl"></div>
+      </div>
 
-            <div className="grid grid-cols-2 gap-4 mt-8">
-              {skills.map((skill, index) => (
-                <div key={index}>
-                  <div className="flex justify-between mb-1">
-                    <span className="text-gray-700 dark:text-gray-300 font-medium">
-                      {skill.name}
-                    </span>
-                    <span className="text-gray-600 dark:text-gray-400">
-                      {skill.level}%
-                    </span>
+      {/* Floating Code Elements */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        {["{ }", "</>", "=>", "()", "[]", "==="].map((symbol, i) => (
+          <div
+            key={i}
+            className="absolute text-white/5 font-mono text-6xl md:text-8xl font-bold animate-float"
+            style={{
+              left: `${5 + i * 15}%`,
+              top: `${20 + (i * 10)}%`,
+              animationDelay: `${i * 0.3}s`,
+              animationDuration: `${20 + i * 5}s`
+            }}
+          >
+            {symbol}
+          </div>
+        ))}
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-20">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-[#bd2323]/20 to-[#0a295e]/20 backdrop-blur-sm border border-[#e6c235]/20 mb-6">
+            <SparklesIcon className="h-4 w-4 text-[#e6c235]" />
+            <span className="text-sm font-semibold text-white tracking-wider">TECHNICAL EXPERTISE</span>
+          </div>
+
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mb-6">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-[#e6c235] to-[#bd2323]">
+              ABOUT • SKILLS • STACK
+            </span>
+          </h2>
+
+          <div className="w-32 h-1 bg-gradient-to-r from-[#bd2323] via-[#e6c235] to-[#0a295e] mx-auto rounded-full mb-8"></div>
+
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Full-Stack Developer specializing in modern web technologies, data analysis,
+            and creating scalable digital solutions with cutting-edge tools.
+          </p>
+        </div>
+
+        {/* Main Content - Two Columns */}
+        <div className="flex flex-col lg:flex-row gap-12 items-start">
+
+          {/* Left Column - Developer Section */}
+          <div className="lg:w-1/2">
+            <div className="relative group mb-12">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-[#bd2323] via-[#e6c235] to-[#0a295e] rounded-2xl blur opacity-30 group-hover:opacity-70 transition-all duration-300 -z-10"></div>
+
+              <div className="relative bg-black/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-800">
+                {/* Header */}
+                <div className="flex items-center gap-3 mb-8">
+                  <div className="w-14 h-14 bg-gradient-to-br from-[#bd2323] to-[#0a295e] rounded-xl flex items-center justify-center">
+                    <CodeBracketIcon className="h-7 w-7 text-white" />
                   </div>
-                  <div className="w-full bg-gray-200 dark:bg-gray-800 rounded-full h-2.5">
+                  <div>
+                    <h3 className="text-2xl font-bold text-white">THE DEVELOPER</h3>
+                    <p className="text-gray-400">Full Stack Developer & CS Student</p>
+                  </div>
+                </div>
+
+                {/* Bio */}
+                <div className="space-y-6 mb-8">
+                  <p className="text-gray-300 leading-relaxed text-lg">
+                    Final-year Computer Science student passionate about creating
+                    exceptional digital experiences. I specialize in modern web
+                    technologies and full-stack development, bridging design with
+                    functionality to build applications that are both beautiful
+                    and robust.
+                  </p>
+
+                  <p className="text-gray-300 leading-relaxed">
+                    My approach combines technical expertise with creative problem-solving.
+                    Currently advancing skills in cloud architecture, microservices,
+                    and AI integration to build the next generation of web applications.
+                  </p>
+                </div>
+
+                {/* Experience Stats */}
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  {[
+                    { value: "3+", label: "Years Coding", color: "#bd2323" },
+                    { value: "50+", label: "Projects", color: "#0a295e" },
+                    { value: "100%", label: "Dedication", color: "#e6c235" },
+                    { value: "∞", label: "Passion", color: "#ffffff" }
+                  ].map((stat, index) => (
                     <div
-                      className="bg-indigo-600 h-2.5 rounded-full"
-                      style={{ width: `${skill.level}%` }}
+                      key={index}
+                      className="bg-black/50 backdrop-blur-sm rounded-xl p-4 border border-gray-800 hover:border-gray-700 transition-all duration-300"
+                    >
+                      <div className="text-2xl font-bold text-white mb-1" style={{ color: stat.color }}>
+                        {stat.value}
+                      </div>
+                      <div className="text-sm text-gray-400 uppercase tracking-wider">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Quote */}
+                <div className="pt-6 border-t border-gray-800">
+                  <div className="flex items-start gap-3">
+                    <div className="text-4xl text-[#bd2323] leading-none">"</div>
+                    <div>
+                      <p className="text-lg italic text-gray-300">
+                        Code is like humor. When you have to explain it, it's bad.
+                      </p>
+                      <p className="text-sm text-[#e6c235] mt-2">- Cory House</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - CS Field Section */}
+          <div className="lg:w-1/2">
+            {/* Field Specializations */}
+            <div className="mb-12">
+              <div className="flex items-center justify-between mb-8">
+                <h3 className="text-2xl md:text-3xl font-bold text-white">FIELD SPECIALIZATIONS</h3>
+                <span className="text-xs px-3 py-1 bg-[#0a295e]/30 text-[#e6c235] rounded-full border border-[#0a295e]">
+                  SKILL LEVELS
+                </span>
+              </div>
+
+              <div className="space-y-6">
+                {fieldSpecializations.map((field, index) => (
+                  <div key={index} className="group relative">
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center gap-3">
+                        <div
+                          className="w-10 h-10 rounded-lg flex items-center justify-center"
+                          style={{ backgroundColor: `${field.color}20` }}
+                        >
+                          <div style={{ color: field.color }}>
+                            {field.icon}
+                          </div>
+                        </div>
+                        <span className="font-medium text-white">{field.name}</span>
+                      </div>
+                      <span
+                        className="font-bold px-3 py-1 rounded-full text-sm"
+                        style={{
+                          backgroundColor: `${field.color}20`,
+                          color: field.color
+                        }}
+                      >
+                        {field.level}%
+                      </span>
+                    </div>
+
+                    <div className="w-full h-2 bg-gray-900 rounded-full overflow-hidden">
+                      <div
+                        className="h-full rounded-full transition-all duration-1000 ease-out group-hover:shadow-lg group-hover:shadow-current/30"
+                        style={{
+                          width: `${field.level}%`,
+                          backgroundColor: field.color
+                        }}
+                      ></div>
+                    </div>
+
+                    <div
+                      className="absolute -inset-4 rounded-xl blur-xl opacity-0 group-hover:opacity-30 transition-all duration-300 -z-10"
+                      style={{ backgroundColor: field.color }}
+                    ></div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Learning Status */}
+            <div className="mt-8 p-6 bg-gradient-to-r from-[#0a295e]/20 to-[#bd2323]/20 backdrop-blur-sm rounded-2xl border border-gray-800">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-[#e6c235] to-[#bd2323] rounded-lg flex items-center justify-center">
+                  <SparklesIcon className="h-6 w-6 text-black" />
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold text-white">Currently Learning</h4>
+                  <p className="text-sm text-gray-400">Advanced Backend & AI Integration</p>
+                </div>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 text-sm bg-black/50 text-[#e6c235] rounded-full">AWS</span>
+                <span className="px-3 py-1 text-sm bg-black/50 text-[#e6c235] rounded-full">Docker</span>
+                <span className="px-3 py-1 text-sm bg-black/50 text-[#e6c235] rounded-full">Machine Learning</span>
+                <span className="px-3 py-1 text-sm bg-black/50 text-[#e6c235] rounded-full">GraphQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Tech Stack Section */}
+        <div>
+          <div className="flex items-center justify-between mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-white">TECH STACK</h3>
+            <span className="text-xs px-3 py-1 bg-[#bd2323]/30 text-white rounded-full border border-[#bd2323]">
+              TOOLS & TECHNOLOGIES
+            </span>
+          </div>
+
+          <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-6 border border-gray-800">
+            <div className="flex flex-wrap gap-3 mb-6">
+              {["Frontend", "Backend", "Database", "Tools", "Language", "Design"].map((category) => (
+                <span
+                  key={category}
+                  className="px-3 py-1 text-xs font-medium rounded-full bg-gray-900/50 text-gray-400"
+                >
+                  {category}
+                </span>
+              ))}
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {techStack.map((tech, index) => (
+                <div
+                  key={index}
+                  className="group relative bg-black/30 backdrop-blur-sm rounded-xl p-4 border border-gray-800 hover:border-gray-700 transition-all duration-300"
+                >
+                  <div className="flex items-center gap-3 mb-2">
+                    <span className="text-2xl">{tech.icon}</span>
+                    <div>
+                      <div className="font-medium text-white">{tech.name}</div>
+                      <div className="text-xs text-gray-500">{tech.category}</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span
+                      className="text-xs font-bold px-2 py-1 rounded"
+                      style={{
+                        backgroundColor: `${proficiencyColors[tech.proficiency]}20`,
+                        color: proficiencyColors[tech.proficiency]
+                      }}
+                    >
+                      {tech.proficiency}
+                    </span>
+                    <div
+                      className="w-2 h-2 rounded-full animate-pulse"
+                      style={{ backgroundColor: proficiencyColors[tech.proficiency] }}
                     ></div>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
 
-          <div className="md:w-1/2">
-            <h3 className="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
-              What I Do
-            </h3>
-            <div className="space-y-6">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="flex gap-4 p-6 rounded-lg bg-gray-50 dark:bg-gray-800 hover:shadow-lg transition-shadow duration-300"
-                >
-                  <div className="flex-shrink-0">{service.icon}</div>
-                  <div>
-                    <h4 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-                      {service.title}
-                    </h4>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      {service.description}
-                    </p>
+            {/* Legend */}
+            <div className="mt-8 pt-6 border-t border-gray-800">
+              <div className="flex flex-wrap gap-4 justify-center">
+                {Object.entries(proficiencyColors).map(([level, color]) => (
+                  <div key={level} className="flex items-center gap-2">
+                    <div
+                      className="w-3 h-3 rounded-full"
+                      style={{ backgroundColor: color }}
+                    ></div>
+                    <span className="text-xs text-gray-400">{level}</span>
                   </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Career Path */}
+        <div className="mt-16 relative">
+          <div className="absolute -inset-0.5 bg-gradient-to-r from-[#bd2323] via-[#e6c235] to-[#0a295e] rounded-2xl blur opacity-20 -z-10"></div>
+          <div className="bg-black/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-800">
+            <h3 className="text-2xl md:text-3xl font-bold text-white text-center mb-6">
+              CAREER PATH & ASPIRATIONS
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center p-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#bd2323] to-[#0a295e] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CodeBracketIcon className="h-8 w-8 text-white" />
                 </div>
-              ))}
+                <h4 className="text-xl font-bold text-white mb-2">Software Engineer</h4>
+                <p className="text-gray-400 text-sm">Building scalable enterprise solutions</p>
+              </div>
+              <div className="text-center p-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#0a295e] to-[#e6c235] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <CpuChipIcon className="h-8 w-8 text-white" />
+                </div>
+                <h4 className="text-xl font-bold text-white mb-2">Tech Lead</h4>
+                <p className="text-gray-400 text-sm">Leading development teams & architecture</p>
+              </div>
+              <div className="text-center p-4">
+                <div className="w-16 h-16 bg-gradient-to-br from-[#e6c235] to-[#bd2323] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <ChartBarIcon className="h-8 w-8 text-white" />
+                </div>
+                <h4 className="text-xl font-bold text-white mb-2">AI/ML Engineer</h4>
+                <p className="text-gray-400 text-sm">Intelligent systems & data solutions</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Add custom animation */}
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        .animate-float {
+          animation: float 25s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 };
