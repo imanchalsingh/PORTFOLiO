@@ -1,133 +1,250 @@
 // components/Projects.js
-import React, { useState } from "react";
-import { EyeIcon, CodeBracketIcon } from "@heroicons/react/24/outline";
+import React from "react";
+import {
+  EyeIcon,
+  CodeBracketIcon,
+  RocketLaunchIcon,
+  SparklesIcon,
+  ArrowTopRightOnSquareIcon,
+  ArrowPathIcon
+} from "@heroicons/react/24/outline";
 import MindMapX from "./Projects/MindMapX.png";
-import Jobable from "./Projects/Jobable.png";
-import FileSharingSystem from "./Projects/FileSharingSystem.png";
+import ParkFinder from "./Projects/ParkFinder.png";
+import PortFolio from "./Projects/PortFolio.png";
 
 const Projects = () => {
-  const [activeFilter, setActiveFilter] = useState("All");
 
   const projects = [
     {
       id: 1,
-      title: "MindMapX - AI-Powered Mind Mapping Tool",
+      title: "MindMapX",
+      subtitle: "AI-Powered Mind Mapping",
       description:
-        "An innovative mind mapping application that leverages AI to help users brainstorm, organize ideas, and enhance creativity.",
+        "An innovative mind mapping application that leverages AI to help users brainstorm, organize ideas, and enhance creativity with real-time collaboration features.",
       image: MindMapX,
-      tags: ["React", "CSS", "AI", "JavaScript"],
+      tags: ["React", "TypeScript", "AI Integration", "Tailwind CSS", "Real-time"],
       liveUrl: "https://mindmapx-imanchalsingh.vercel.app/",
       codeUrl: "https://github.com/imanchalsingh/mindmap",
+      featured: true,
+      accentColor: "#e6c235"
     },
     {
       id: 2,
-      title: "Jobable - Job Search Application",
+      title: "PortFolio",
+      subtitle: "Personal Portfolio Website",
       description:
-        "A job search platform that aggregates listings from various sources, allowing users to filter and apply for jobs seamlessly.",
-      image: Jobable,
-      tags: ["React", " API", "CSS"],
-      liveUrl: "https://jobable-jobsearchapp.vercel.app/",
-      codeUrl: "https://github.com/imanchalsingh/jobable",
+        "A dynamic portfolio website showcasing projects, skills, and experiences with a modern design and smooth animations.",
+      image: PortFolio,
+      tags: ["React", "Next.js", "Tailwind CSS", "Framer Motion"],
+      liveUrl: "https://portfolio-imanchalsingh.vercel.app/",
+      codeUrl: "https://github.com/imanchalsingh/PORTFOLiO",
+      featured: true,
+      accentColor: "#bd2323"
     },
     {
       id: 3,
-      title: "File Sharing System",
+      title: "SmartPark Finder",
+      subtitle: "Parking Space Locator",
       description:
-        "A secure and efficient file sharing platform that allows users to upload, share, and manage files with ease.",
-      image: FileSharingSystem,
-      tags: ["React", "Node.js", "Express", "MongoDB"],
-      liveUrl: "https://file-sharing-system-ashen.vercel.app/register",
-      codeUrl: "https://github.com/imanchalsingh/File-Sharing-System",
+        "A web application that helps users find available parking spaces in real-time using geolocation and mapping technologies.",
+      image: ParkFinder,
+      tags: ["React", "Node.js", "Express", "MongoDB", "Leaflet Maps API"],
+      liveUrl: "https://parkfinder-three.vercel.app/",
+      codeUrl: "https://github.com/imanchalsingh/parkfinder",
+      featured: true,
+      accentColor: "#0a295e"
     },
   ];
 
-  const filters = [
-    "All",
-    "React",
-    "JavaScript",
-    "Node.js",
-  ];
-
-  const filteredProjects =
-    activeFilter === "All"
-      ? projects
-      : projects.filter((project) => project.tags.includes(activeFilter));
-
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
-      <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 dark:text-white mb-4">
-          My Projects
-        </h2>
-        <div className="w-20 h-1 bg-indigo-600 mx-auto mb-12"></div>
-
-        {/* Filter buttons */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setActiveFilter(filter)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-300 ${
-                activeFilter === filter
-                  ? "bg-indigo-600 text-white"
-                  : "bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-indigo-100 dark:hover:bg-gray-600"
-              }`}
-            >
-              {filter}
-            </button>
-          ))}
+    <section id="projects" className="py-24 bg-black relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute inset-0 -z-10">
+        {/* Diagonal Grid Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `linear-gradient(45deg, #0a295e 1px, transparent 1px)`,
+            backgroundSize: '60px 60px'
+          }}></div>
         </div>
 
-        {/* Projects grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
+        {/* Gradient Orbs */}
+        <div className="absolute -top-40 left-1/4 w-96 h-96 bg-gradient-to-br from-[#bd2323]/10 to-transparent rounded-full blur-3xl"></div>
+        <div className="absolute -bottom-40 right-1/4 w-96 h-96 bg-gradient-to-br from-[#0a295e]/10 to-transparent rounded-full blur-3xl"></div>
+      </div>
+
+      {/* Floating Tech Icons */}
+      <div className="absolute inset-0 -z-10 overflow-hidden">
+        {["</>", "{}", "()", "[]", "=>"].map((symbol, i) => (
+          <div
+            key={i}
+            className="absolute text-white/5 font-mono text-6xl md:text-8xl font-bold animate-float"
+            style={{
+              left: `${10 + i * 20}%`,
+              top: `${15 + (i * 15)}%`,
+              animationDelay: `${i * 0.5}s`,
+              animationDuration: `${15 + i * 3}s`
+            }}
+          >
+            {symbol}
+          </div>
+        ))}
+      </div>
+
+      <div className="container mx-auto px-4 md:px-6 relative z-20">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-[#bd2323]/20 to-[#0a295e]/20 backdrop-blur-sm border border-[#e6c235]/20 mb-6">
+            <SparklesIcon className="h-4 w-4 text-[#e6c235]" />
+            <span className="text-sm font-semibold text-white tracking-wider">PORTFOLIO SHOWCASE</span>
+          </div>
+
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight mb-6">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white via-[#e6c235] to-[#bd2323]">
+              PROJECTS
+            </span>
+          </h2>
+
+          <div className="w-32 h-1 bg-gradient-to-r from-[#bd2323] via-[#e6c235] to-[#0a295e] mx-auto rounded-full mb-8"></div>
+
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+            Building digital experiences that solve real problems and push technological boundaries.
+            Each project represents a unique challenge and creative solution.
+          </p>
+        </div>
+
+        {/* Projects Grid - Modern Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+          {projects.map((project, index) => (
             <div
               key={project.id}
-              className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105 cursor-pointer"
+              className="relative group"
+              
             >
-              <div className="relative overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-500 hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gray-600 bg-opacity-70 opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                  <a
-                    href={project.liveUrl}
-                    className="p-2 bg-white text-gray-800 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-300"
-                  >
-                    <EyeIcon className="h-5 w-5" />
-                  </a>
-                  <a
-                    href={project.codeUrl}
-                    className="p-2 bg-white text-gray-800 rounded-full hover:bg-indigo-600 hover:text-white transition-colors duration-300"
-                  >
-                    <CodeBracketIcon className="h-5 w-5" />
-                  </a>
+              {/* Glow Effect */}
+              <div
+                className="absolute -inset-4 rounded-3xl blur-xl transition-all duration-500 opacity-0 group-hover:opacity-70 -z-10"
+                style={{ backgroundColor: project.accentColor }}
+              ></div>
+
+              <div className="relative bg-black/80 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-800 group-hover:border-gray-700 transition-all duration-300 h-full">
+                {/* Project Image with Overlay */}
+                <div className="relative h-56 overflow-hidden">
+                  <div
+                    className="absolute inset-0 z-10 transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+                    style={{
+                      background: `linear-gradient(to bottom, transparent 30%, ${project.accentColor}20 70%)`
+                    }}
+                  ></div>
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+
+                  {/* Featured Badge */}
+                  {project.featured && (
+                    <div className="absolute top-4 left-4 px-3 py-1 bg-gradient-to-r from-[#e6c235] to-[#bd2323] text-black text-xs font-bold rounded-full flex items-center gap-1 z-20">
+                      <SparklesIcon className="h-3 w-3" />
+                      FEATURED
+                    </div>
+                  )}
+
+                  {/* Live Preview Overlay */}
+                  <div className="absolute inset-0 bg-black/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300 z-10">
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-gradient-to-r from-[#bd2323] to-[#0a295e] text-white rounded-full hover:scale-110 transition-all duration-300 group/link"
+                    >
+                      <EyeIcon className="h-6 w-6" />
+                      <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap text-xs bg-black px-2 py-1 rounded opacity-0 group-hover/link:opacity-100 transition-opacity">
+                        Live Demo
+                      </span>
+                    </a>
+                    <a
+                      href={project.codeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-3 bg-gradient-to-r from-[#0a295e] to-[#bd2323] text-white rounded-full hover:scale-110 transition-all duration-300 group/link"
+                    >
+                      <CodeBracketIcon className="h-6 w-6" />
+                      <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 whitespace-nowrap text-xs bg-black px-2 py-1 rounded opacity-0 group-hover/link:opacity-100 transition-opacity">
+                        View Code
+                      </span>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Project Content */}
+                <div className="p-6">
+                  <div className="flex items-start justify-between mb-3">
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-1 group-hover:text-[#e6c235] transition-colors duration-300">
+                        {project.title}
+                      </h3>
+                      <p className="text-sm text-gray-400 mb-2">{project.subtitle}</p>
+                    </div>
+                    <ArrowTopRightOnSquareIcon className="h-5 w-5 text-gray-500 group-hover:text-[#e6c235] transition-colors duration-300" />
+                  </div>
+
+                  <p className="text-gray-400 mb-4 leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 text-xs font-medium rounded-full border border-gray-800 text-gray-400 hover:border-[#e6c235] hover:text-[#e6c235] transition-all duration-300 cursor-default"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Project Footer */}
+                  <div className="flex items-center justify-between pt-4 border-t border-gray-800">
+                    <div className="flex items-center gap-2">
+                      <div
+                        className="w-2 h-2 rounded-full animate-pulse"
+                        style={{ backgroundColor: project.accentColor }}
+                      ></div>
+                      <span className="text-xs text-gray-500">Active Project</span>
+                    </div>
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => window.open(project.liveUrl, '_blank')}
+                        className="text-xs px-3 py-1 bg-gradient-to-r from-[#bd2323] to-[#0a295e] text-white rounded-lg hover:shadow-lg transition-all duration-300"
+                      >
+                        Visit Site
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-800 dark:text-white mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-600 dark:text-indigo-400 rounded-full text-xs"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+
+              {/* Project Number */}
+              <div className="absolute -top-3 -left-3 w-12 h-12 bg-black border-2 border-[#e6c235] rounded-full flex items-center justify-center z-20">
+                <span className="text-xl font-bold text-[#e6c235]">0{index + 1}</span>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Add custom animation */}
+      <style jsx>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0) rotate(0deg); }
+          50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        .animate-float {
+          animation: float 20s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 };
