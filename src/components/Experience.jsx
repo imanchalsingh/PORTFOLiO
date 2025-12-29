@@ -61,38 +61,38 @@ const Experience = () => {
     {
       company: "CodSoft",
       role: "Web Development Intern",
-      duration: "1 month",
-      tech: ["HTML", "CSS", "JavaScript", "React"]
+      duration: "2 weeks",
+      tech: ["React", "JavaScript", "Frontend", "Rest APIs", "GitHub"]
     },
     {
       company: "CodeAlpha",
-      role: "Web Development Intern",
-      duration: "1 month",
-      tech: ["Frontend", "UI/UX", "Responsive Design"]
+      role: "Full Stack Development Intern",
+      duration: "15 days",
+      tech: ["MERN Stack", "APIs", "Git"]
     },
     {
       company: "CodeClause",
       role: "Web Development Intern",
       duration: "1 month",
-      tech: ["JavaScript", "APIs", "Git"]
+      tech: ["Next.js", "Tailwind CSS", "Responsive Design"]
     },
     {
       company: "Oasis Infobyte",
-      role: "Web Development Intern",
-      duration: "1 month",
-      tech: ["HTML/CSS", "JavaScript", "Projects"]
+      role: "Web Development & Designing Intern",
+      duration: "15 days",
+      tech: ["React", "Figma", "UI/UX", "Frontend", "Rest APIs"]
     },
     {
       company: "Cognifyz",
       role: "Full Stack Development Intern",
-      duration: "1 month",
+      duration: "3 weeks",
       tech: ["MERN Stack", "APIs", "Database"]
     },
     {
       company: "CodVeda Technologies",
-      role: "Web Development Intern",
+      role: "Full Stack Development Intern",
       duration: "1 month",
-      tech: ["React", "Tailwind", "Projects"]
+      tech: ["Angular", "Node.js", "Express", "MongoDB", "REST APIs", "Git"]
     }
   ];
 
