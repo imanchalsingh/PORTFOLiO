@@ -252,7 +252,7 @@ const Footer = () => {
         {/* Attribution */}
         <div className="mt-8 text-center">
           <p className="text-xs text-gray-600">
-            Designed & Developed with Next.js, React, and Tailwind CSS
+            Designed & Developed with Vite, React, and Tailwind CSS
           </p>
           <p className="text-xs text-gray-600 mt-1">
             Optimized for performance and accessibility
