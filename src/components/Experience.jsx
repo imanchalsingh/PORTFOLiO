@@ -12,51 +12,30 @@ import {
 } from "@heroicons/react/24/outline";
 
 const Experience = () => {
-  const experiences = [
+  const contributions = [
     {
-      id: 1,
-      type: "Internship",
-      role: "Front-End Engineer Intern",
-      company: "Stealth Startup",
-      period: "Aug 2025 - Sep 2025",
-      duration: "2 months",
-      location: "Remote",
-      description:
-        "Worked on real-world projects at a stealth startup (NDA protected), implementing modern UI/UX designs with React + Tailwind CSS, optimizing performance, and developing scalable frontend architecture.",
-      technologies: ["React", "Tailwind CSS", "JavaScript", "UI/UX", "Git"],
-      highlights: ["NDA Project", "Real-world Implementation", "Performance Optimization"],
-      icon: <RocketLaunchIcon className="h-6 w-6" />
-    },
-    {
-      id: 2,
-      type: "Open Source",
-      role: "Open Source Contributor",
-      company: "Code Social",
-      period: "Dec 2025 - Present",
-      duration: "Ongoing",
-      location: "Remote",
-      description:
-        "Active contributor to multiple open-source JavaScript and React projects on GitHub, focusing on feature enhancements, bug fixes, and documentation improvements while collaborating with global developers.",
-      technologies: ["JavaScript", "React", "GitHub", "Documentation", "Collaboration"],
-      highlights: ["Global Collaboration", "Multiple Projects", "Code Review"],
-      icon: <GlobeAltIcon className="h-6 w-6" />
-    },
-    {
-      id: 3,
-      type: "Open Source",
-      role: "Open Source Contributor",
       company: "Social Winter of Code (SWOC)",
-      period: "Nov 2025 - Present",
+      role: "SWOC'26 Contributor",
       duration: "Ongoing",
-      location: "Remote",
-      description:
-        "Contributing to various open-source initiatives, implementing new features, improving code quality, and participating in community discussions to enhance project functionality and user experience.",
-      technologies: ["Open Source", "JavaScript", "React", "Python", "APIs"],
-      highlights: ["Community Driven", "Feature Development", "Code Quality"],
-      icon: <CodeBracketIcon className="h-6 w-6" />
+      tech: ["Open Source", "GitHub", "Collaboration"]
+    }, {
+      company: "Code Social",
+      role: "WoCS'26 Contributor",
+      duration: "Ongoing",
+      tech: ["JavaScript", "React", "GitHub", "Typescript"]
+    }, {
+      company: "Open Source Connect",
+      role: "OSCG'26 Contributor",
+      duration: "Ongoing",
+      tech: ["Open Source", "GitHub", "Collaboration"]
+    },
+    {
+      company: "Elite Coders",
+      role: "ECWoC'26 Contributor",
+      duration: "Ongoing",
+      tech: ["JavaScript", "React", "GitHub", "Typescript"]
     }
-  ];
-
+  ]
   const internships = [
     {
       company: "CodSoft",
@@ -154,98 +133,8 @@ const Experience = () => {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-12">
-          {/* Left Column - Main Experiences */}
-          <div className="lg:w-2/3">
-            <div className="space-y-8">
-              {experiences.map((exp, index) => (
-                <div key={exp.id} className="relative group">
-                  {/* Connection Line */}
-                  {index < experiences.length - 1 && (
-                    <div className="absolute left-8 top-24 bottom-0 w-1 bg-gradient-to-b from-[#bd2323] via-[#e6c235] to-[#0a295e] opacity-30 -z-10"></div>
-                  )}
-
-                  {/* Timeline Dot */}
-                  <div className="absolute left-8 top-8 w-4 h-4 rounded-full bg-gradient-to-r from-[#bd2323] to-[#0a295e] border-4 border-black z-10"></div>
-
-                  {/* Experience Card */}
-                  <div className="ml-12">
-                    <div className="relative">
-                      {/* Glow Effect */}
-                      <div className="absolute -inset-0.5 bg-gradient-to-r from-[#bd2323] via-[#e6c235] to-[#0a295e] rounded-2xl blur opacity-20 group-hover:opacity-40 transition-all duration-300 -z-10"></div>
-
-                      <div className="relative bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-800 p-8 hover:border-gray-700 transition-all duration-300">
-                        {/* Header */}
-                        <div className="flex flex-col md:flex-row md:items-start justify-between gap-4 mb-6">
-                          <div className="flex items-start gap-4">
-                            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#bd2323] to-[#0a295e] flex items-center justify-center">
-                              <div className="text-white">
-                                {exp.icon}
-                              </div>
-                            </div>
-                            <div>
-                              <div className="flex items-center gap-2 mb-1">
-                                <span className="px-3 py-1 text-xs font-bold rounded-full bg-[#0a295e]/30 text-[#e6c235] border border-[#0a295e]">
-                                  {exp.type}
-                                </span>
-                                <span className="text-sm text-gray-400">{exp.duration}</span>
-                              </div>
-                              <h3 className="text-2xl font-bold text-white">{exp.role}</h3>
-                              <p className="text-lg text-[#e6c235]">{exp.company}</p>
-                            </div>
-                          </div>
-
-                          <div className="flex items-center gap-2 text-gray-400">
-                            <CalendarIcon className="h-4 w-4" />
-                            <span className="text-sm">{exp.period}</span>
-                            <MapPinIcon className="h-4 w-4 ml-2" />
-                            <span className="text-sm">{exp.location}</span>
-                          </div>
-                        </div>
-
-                        {/* Description */}
-                        <p className="text-gray-300 mb-6 leading-relaxed">
-                          {exp.description}
-                        </p>
-
-                        {/* Highlights */}
-                        <div className="mb-6">
-                          <h4 className="text-sm font-bold text-gray-400 mb-3 uppercase tracking-wider">Highlights</h4>
-                          <div className="flex flex-wrap gap-2">
-                            {exp.highlights.map((highlight, idx) => (
-                              <span
-                                key={idx}
-                                className="px-3 py-1 text-sm bg-gradient-to-r from-[#0a295e]/20 to-[#bd2323]/20 text-gray-300 rounded-full border border-gray-800 hover:border-[#e6c235]/50 transition-all duration-300"
-                              >
-                                {highlight}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Technologies */}
-                        <div>
-                          <h4 className="text-sm font-bold text-gray-400 mb-3 uppercase tracking-wider">Technologies</h4>
-                          <div className="flex flex-wrap gap-2">
-                            {exp.technologies.map((tech, idx) => (
-                              <span
-                                key={idx}
-                                className="px-3 py-1 text-sm bg-black/50 text-gray-400 rounded-lg border border-gray-800 hover:text-[#e6c235] hover:border-[#e6c235]/30 transition-all duration-300"
-                              >
-                                {tech}
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Column - Internships Summary */}
-          <div className="lg:w-1/3">
+          {/*Left Column - Internships Summary */}
+          <div className="lg:w-1/2">
             {/* Internship Programs */}
             <div className="sticky top-24">
               <div className="relative group mb-8">
@@ -293,16 +182,58 @@ const Experience = () => {
                       </div>
                     ))}
                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Right Column - Contributions */}
+          <div className="lg:w-1/2">
+            {/* Contributions */}
+            <div className="sticky top-24">
+              <div className="relative group mb-8">
+                <div className="absolute -inset-0.5 bg-gradient-to-br from-[#e6c235] to-[#bd2323] rounded-2xl blur opacity-20 group-hover:opacity-40 transition-all duration-300 -z-10"></div>
 
-                  <div className="mt-6 pt-6 border-t border-gray-800">
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-gray-400">Total Experience</span>
-                      <span className="text-lg font-bold text-[#e6c235]">6+ months</span>
+                <div className="relative bg-black/80 backdrop-blur-sm rounded-2xl border border-gray-800 p-6">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#e6c235] to-[#bd2323] flex items-center justify-center">
+                      <BuildingOfficeIcon className="h-6 w-6 text-black" />
                     </div>
-                    <div className="flex items-center justify-between mt-2">
-                      <span className="text-sm text-gray-400">Companies</span>
-                      <span className="text-lg font-bold text-[#bd2323]">6+</span>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">OPEN SOURCE CONTRIBUTIONS</h3>
+                      <p className="text-sm text-gray-400">Ongoing...</p>
                     </div>
+                  </div>
+
+                  <div className="space-y-4">
+                    {contributions.map((intern, idx) => (
+                      <div
+                        key={idx}
+                        className="group/intern relative p-4 rounded-xl border border-gray-800 hover:border-gray-700 bg-black/50 hover:bg-black/80 transition-all duration-300"
+                      >
+                        <div className="flex items-start justify-between">
+                          <div>
+                            <h4 className="font-bold text-white">{intern.company}</h4>
+                            <p className="text-sm text-gray-400">{intern.role}</p>
+                          </div>
+                          <span className="text-xs px-2 py-1 bg-[#0a295e]/30 text-[#e6c235] rounded-full">
+                            {intern.duration}
+                          </span>
+                        </div>
+
+                        <div className="mt-3 flex flex-wrap gap-1">
+                          {intern.tech.map((tech, techIdx) => (
+                            <span
+                              key={techIdx}
+                              className="text-xs px-2 py-1 bg-black/30 text-gray-500 rounded"
+                            >
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#e6c235]/5 to-transparent opacity-0 group-hover/intern:opacity-100 transition-opacity duration-300 -z-10"></div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -334,33 +265,21 @@ const Experience = () => {
                       <div className="h-full bg-gradient-to-r from-[#e6c235] to-[#bd2323] rounded-full" style={{ width: '90%' }}></div>
                     </div>
                   </div>
-
                   <div>
                     <div className="flex justify-between mb-1">
-                      <span className="text-sm text-gray-300">Team Collaboration</span>
-                      <span className="text-sm font-bold text-white">85%</span>
+                      <span className="text-sm text-gray-300">Contributions</span>
+                      <span className="text-sm font-bold text-white">65%</span>
                     </div>
                     <div className="w-full h-2 bg-gray-800 rounded-full overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-[#0a295e] to-[#e6c235] rounded-full" style={{ width: '85%' }}></div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Achievement Badge */}
-                <div className="mt-6 p-4 bg-gradient-to-r from-[#0a295e]/20 to-[#bd2323]/20 rounded-xl border border-gray-800">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#e6c235] to-[#bd2323] flex items-center justify-center">
-                      <TrophyIcon className="h-5 w-5 text-black" />
-                    </div>
-                    <div>
-                      <p className="text-sm font-bold text-white">All Internships Completed Successfully</p>
-                      <p className="text-xs text-gray-400">100% completion rate</p>
+                      <div className="h-full bg-gradient-to-r from-[#e6c235] to-[#0a295e] rounded-full" style={{ width: '65%' }}></div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+
         </div>
 
         {/* Timeline Overview */}
