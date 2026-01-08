@@ -43,6 +43,7 @@ const About = () => {
     { name: "C/C++" },
     { name: "Python" },
     { name: "Docker" },
+    { name: "Java" },
     { name: "AWS" },
     { name: "Jest" },
     { name: "GraphQL" },
@@ -58,6 +59,7 @@ const About = () => {
     { name: "Bootstrap" },
     { name: "D3.js" },
     { name: "TensorFlow" },
+    { name: "Firebase" }
   ];
 
 
