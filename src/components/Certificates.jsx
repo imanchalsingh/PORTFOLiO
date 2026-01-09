@@ -8,7 +8,7 @@ import {
   EyeIcon
 } from "@heroicons/react/24/outline";
 
-// Import all certificate images (keep your imports)
+// Import all certificate images
 import angular from "./certificates/angular.jpg";
 import CppSololearn from "./certificates/CppSololearn.png";
 import csshk from "./certificates/csshk.png";

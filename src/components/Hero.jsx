@@ -1,4 +1,3 @@
-// components/Hero.js
 import React from "react";
 import { FiArrowRight, FiMail, FiCode, FiTool, FiCpu, FiZap } from "react-icons/fi";
 import { TbBrandNextjs, TbBrandReact, TbBrandNodejs } from "react-icons/tb";

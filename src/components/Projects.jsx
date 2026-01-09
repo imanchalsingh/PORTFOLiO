@@ -1,4 +1,3 @@
-// components/Projects.js
 import React from "react";
 import {
   EyeIcon,

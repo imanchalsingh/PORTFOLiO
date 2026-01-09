@@ -1,4 +1,3 @@
-// components/Experience.js
 import React from "react";
 import {
   BriefcaseIcon,
