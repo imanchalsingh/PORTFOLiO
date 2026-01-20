@@ -54,7 +54,7 @@ const Certificates = () => {
         credentialLink: "#",
         skills: ["React", "Webpack"],
         image: reactproject,
-        category: "Frontend"
+        category: "React"
       },
       {
         id: 1,
