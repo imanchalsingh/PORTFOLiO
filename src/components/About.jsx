@@ -36,6 +36,7 @@ const About = () => {
     { name: "Git" },
     { name: "GitHub" },
     { name: "GitLab" },
+    { name: "Matlab" },
     { name: "Figma" },
     { name: "Next.js" },
     { name: "REST API" },
