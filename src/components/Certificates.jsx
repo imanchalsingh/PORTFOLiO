@@ -34,6 +34,7 @@ import ai_assiated from "./certificates/ai-assited.png";
 import cs_fundamentals from "./certificates/cs-fundamentals.png";
 import bootstrapccis from "./certificates/bootstrapccis.png";
 import postgresql from "./certificates/postgresql.png";
+import reactproject from "./certificates/reactprojectis.png";
 
 const Certificates = () => {
   const [isDragging, setIsDragging] = useState(false);
@@ -45,6 +46,16 @@ const Certificates = () => {
   // Initialize certificates data
   useEffect(() => {
     setCertificates([
+         {
+        id: 0,
+        title: "React Project Webpack",
+        issuer: "Infosys | Springboard",
+        date: "January 2026",
+        credentialLink: "#",
+        skills: ["React", "Webpack"],
+        image: reactproject,
+        category: "Frontend"
+      },
       {
         id: 1,
         title: "PostgreSQL Developer",
