@@ -8,10 +8,9 @@ A modern and responsive personal portfolio showcasing my skills, projects, and e
 ---
 
 ## 🚀 Tech Stack
-- React.js
+- React.js / Vite
 - JavaScript / TypeScript
 - Tailwind CSS
-- HTML & CSS
 
 ---
 
