@@ -1,34 +1,34 @@
-# 🌐 Portfolio
+# 🌐 Anchal Singh's Portfolio
 
-A modern and responsive personal portfolio showcasing my skills, projects, and experience as a **Frontend Developer** exploring **Full-Stack Development**.
+A **modern, responsive portfolio** showcasing my skills, projects, and journey as a **Frontend Developer** with a growing focus on **Full-Stack Development**.
 
-🔗 Live: https://portfolio-imanchalsingh.vercel.app/
-📁 Repo: https://github.com/imanchalsingh/PORTFOLiO
+🔗 **Live Demo:** [https://portfolio-imanchalsingh.vercel.app](https://portfolio-imanchalsingh.vercel.app)  
+📁 **Source Code:** [https://github.com/imanchalsingh/PORTFOLiO](https://github.com/imanchalsingh/PORTFOLiO)
 
 ---
 
 ## 🚀 Tech Stack
-- React.js / Vite
-- JavaScript / TypeScript
-- Tailwind CSS
+- **Frontend:** React.js (Vite)  
+- **Languages:** JavaScript / TypeScript  
+- **Styling:** Tailwind CSS  
 
 ---
 
-## ✨ Features
-- Responsive design
-- Smooth navigation
-- Project showcase
-- Clean UI
+## ✨ Key Features
+- Fully **responsive design** for all devices  
+- Smooth and intuitive **navigation**  
+- Clean and modern **UI/UX**  
+- Showcases **projects and skills** effectively  
 
 ---
 
 ## 👩‍💻 About Me
-Hi, I’m **Anchal Singh**, a Computer Science (BCA) student and aspiring Frontend Developer with 70+ projects experience.
+Hi, I’m **Anchal Singh** – a Computer Science (BCA) student and **aspiring Frontend Developer**. I’ve built **70+ projects** and I’m passionate about turning ideas into interactive, high-quality web experiences.  
 
 ---
 
-## 📬 Contact
-- GitHub: https://github.com/imanchalsingh
-- LinkedIn: https://linkedin.com/in/imanchalsingh
+## 📬 Connect With Me
+- **GitHub:** [imanchalsingh](https://github.com/imanchalsingh)  
+- **LinkedIn:** [in/anchalsingh](https://linkedin.com/in/imanchalsingh)  
 
-⭐ Star the repo if you like it!
+⭐ If you like this portfolio, don’t forget to **star the repo**!
