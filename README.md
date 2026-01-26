@@ -26,7 +26,7 @@ A **modern, responsive portfolio** showcasing my skills, projects, and journey a
 
 ## 👩‍💻 About Me
 
-Hi, I’m **Anchal Singh** – a Computer Science (BCA) student and **aspiring Frontend Developer**. I’ve built **70+ projects** and I’m passionate about turning ideas into interactive, high-quality web experiences.  
+Hi, I’m **Anchal Singh** – a Computer Science (BCA) student and **aspiring Frontend Developer**. I’m passionate about turning ideas into interactive, high-quality web experiences.  
 
 ---
 
