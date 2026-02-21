@@ -2,14 +2,13 @@ import React from "react";
 import {
   EyeIcon,
   CodeBracketIcon,
-  RocketLaunchIcon,
   SparklesIcon,
   ArrowTopRightOnSquareIcon,
-  ArrowPathIcon
 } from "@heroicons/react/24/outline";
 import MindMapX from "./Projects/MindMapX.png";
 import ParkFinder from "./Projects/ParkFinder.png";
 import PortFolio from "./Projects/PortFolio.png";
+import ShareVault from "./Projects/ShareVault.png";
 
 const Projects = () => {
 
@@ -42,7 +41,7 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "SmartPark Finder",
+      title: "SmartPark - Parking Slot Finder",
       subtitle: "Parking Space Locator",
       description:
         "A web application that helps users find available parking spaces in real-time using geolocation and mapping technologies.",
@@ -53,6 +52,19 @@ const Projects = () => {
       featured: true,
       accentColor: "#0a295e"
     },
+    {
+      id:4,
+      title: "ShareVault - File Sharing System",
+      subtitle: "Secure File Transfer Platform",
+      description:
+        "A secure and efficient file sharing platform that allows users to upload, download, and manage files with end-to-end encryption.",
+      image: ShareVault,
+      tags: ["React", "Node.js", "Express", "MongoDB", "JWT Authentication"],
+      liveUrl: "https://file-sharing-system-lake.vercel.app/",
+      codeUrl: "https://github.com/imanchalsingh/File-Sharing-System",
+      featured: false,
+      accentColor: "#bd2323"
+    }
   ];
 
   return (
