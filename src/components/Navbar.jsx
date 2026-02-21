@@ -45,8 +45,6 @@ const Navbar = () => {
     { name: "HOME", href: "#home", icon: <HomeIcon className="h-5 w-5" /> },
     { name: "ABOUT", href: "#about", icon: <UserIcon className="h-5 w-5" /> },
     { name: "PROJECTS", href: "#projects", icon: <RocketLaunchIcon className="h-5 w-5" /> },
-    { name: "CERTIFICATES", href: "#certificates", icon: <DocumentTextIcon className="h-5 w-5" /> },
-    { name: "EXPERIENCE", href: "#experience", icon: <BriefcaseIcon className="h-5 w-5" /> },
     { name: "CONTACT", href: "#contact", icon: <PhoneIcon className="h-5 w-5" /> },
   ];
 
